@@ -8,7 +8,7 @@ import {
   Hand, Activity, Flower2, Home, Building2,
   ArrowLeft, ArrowRight, Clock, CheckCircle2, Users,
 } from "lucide-react";
-import { getServiceBySlug, Services} from "../data/Services";
+import { getServiceBySlug,services} from "../data/Services";
 
 const iconMap = { Hand, Activity, Flower2, Home, Building2 };
 
