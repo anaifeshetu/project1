@@ -14,7 +14,7 @@ import {
 import Header from "../componenet/Header";
 import Herosection from "../componenet/Herosection";
 import OurServices from "./Ourservice";
-import BookingPage from "./BookingPage";
+import BookingPage from "./Bookingpage";
 import ContactSection from "./Contactsection";
 import WhyChooseEthiomassage from "../pages/Whychoseethiomassage";
 
