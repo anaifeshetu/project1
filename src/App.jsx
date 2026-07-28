@@ -4,13 +4,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./componenet/Header"; // <-- Import Header
 
 import Home from "./pages/Home";
-import ServicesPage from "./pages/ServicesPage";
-import ServiceDetailPage from "./pages/ServiceDetailPage";
-import BookingPage from "./pages/BookingPage";
+import ServicesPage from "./pages/Servicespage";
+import ServiceDetailPage from "./pages/Servicedetailpage";
+import BookingPage from "./pages/Bookingpage";
 import Contactsection from "./pages/Contactsection";
 import NotFound from "./pages/pagesnotfound";
 
-import BottomNavBar from "./componenet/BottomNavBar";
+import BottomNavBar from "./componenet/Bottomnavbar";
 import Chat from "./componenet/ChatWidget";
 
 function App() {
