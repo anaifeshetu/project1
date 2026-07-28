@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import saraImg from "../assets/Sara.jpg";
 import helenImg from "../assets/Helen.jpg";
-import liyaImg from "../assets/liya.jpg";
+import liyaImg from "../assets/Liya.jpg";
 
 export default function WhyChooseEthiomassage() {
   return (
