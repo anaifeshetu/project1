@@ -1,0 +1,3 @@
+/* Tailwind v4 syntax — a single @import, not the old
+   @tailwind base; @tailwind components; @tailwind utilities; */
+@import "tailwindcss";
