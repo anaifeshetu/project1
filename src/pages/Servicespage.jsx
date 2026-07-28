@@ -9,7 +9,7 @@ import {
   Hand, Activity, Flower2, Home, Building2, TreePine,
   ArrowLeft, ArrowRight, Clock, Sparkles,
 } from "lucide-react";
-import { services } from "../data/services";
+import { services } from "../data/Services";
 
 import room from "../assets/room.jpg";
 import outdoor from "../assets/outdoor.jpg";
