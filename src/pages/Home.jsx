@@ -14,9 +14,10 @@ import {
 import Header from "../componenet/Header";
 import Herosection from "../componenet/Herosection";
 import OurServices from "./Ourservice";
-// import BookingPage from "./Bookingpage";
-// import ContactSection from "./Contactsection";
+import BookingPage from "./Bookingpage";
+import ContactSection from "./Contactsection";
 import WhyChooseEthiomassage from "../pages/Whychoseethiomassage";
+import ServicesPage from "./Servicespage";
 
 function Teaser({ icon: Icon, title, description, to, cta }) {
   return (
@@ -66,6 +67,10 @@ export default function Home() {
         <Herosection />
          
       <WhyChooseEthiomassage />
+      <ServicesPage/>
+      <BookingPage />
+      <ContactSection/>
+
       </div>
 
       

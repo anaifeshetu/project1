@@ -4,6 +4,7 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ArrowLeft, MapPin, Home as HomeIcon, TreePine, CheckCircle2 } from "lucide-react";
+import Header from "../componenet/Header";
 
 const massageTypes = ["Swedish Massage", "Deep Tissue Massage", "Relaxation Massage"];
 

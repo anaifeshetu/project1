@@ -4,8 +4,9 @@ import massage from "../assets/massage.png"
 import { MenuIcon } from "lucide-react";
 export default function Header() {
   return (
+    
     <div className="flex justify-center bg-[#f7f5f0] px-4 py-3 sm:px-3 ">
-    <header className=" realtive w-full max-w-5xl mx-auto overflow-hidden rounded-[28px] bg-white  flex items-center justify-between p-4">
+    <header className="w-full max-w-5xl mx-auto overflow-hidden rounded-[28px] bg-white  flex items-center justify-between p-4">
 
       {/* Hamburger Menu */}
       {/* <button

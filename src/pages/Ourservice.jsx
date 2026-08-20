@@ -13,7 +13,7 @@ import {
   ArrowRight,
   Sparkles,
 } from "lucide-react";
-import WhyChooseEthiomassage from "../pages/Whychoseethiomassage";
+
 
 import room from "../assets/room.jpg";
 import outdoor from "../assets/outdoor.jpg";
@@ -62,7 +62,7 @@ export default function OurServices() {
         <div className="relative w-full rounded-[28px] p-4 sm:p-5">
           {/* Heading */}
           
-             <WhyChooseEthiomassage/>
+            
 
           
           <div className="mb-8 flex items-center justify-center gap-2">
