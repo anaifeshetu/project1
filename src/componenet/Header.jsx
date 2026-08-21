@@ -1,100 +1,147 @@
-// NO CHANGES NEEDED: this file was already correct. Included here unchanged
-// so you have the full matching set. Function name (Header) unchanged.
-import massage from "../assets/massage.png"
-import { MenuIcon } from "lucide-react";
+import React from "react";
+import { Phone, Menu } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import massage from "../assets/massage.png";
+
 export default function Header() {
+  const navigate = useNavigate();
+
+  const handleCall = () => {
+    window.location.href = "tel:+251900000000";
+  };
+
   return (
-    
-    <div className="flex justify-center bg-[#f7f5f0] px-4 py-3 sm:px-3 ">
-    <header className="w-full max-w-5xl mx-auto overflow-hidden rounded-[28px] bg-white  flex items-center justify-between p-4">
-
-      {/* Hamburger Menu */}
-      {/* <button
-        aria-label="Open menu"
-        className="flex-col gap-2 p-1  flex items-center justify-between cursor-pointer"
-      >
-        <span className="block w-2 h-1 bg-[#111] "></span>
-        <span className="block w-2 h-1 bg-[#111] "></span>
-        <span className="block w-2 h-1 bg-[#111] "></span>
-      </button> */}
-      <div>
- <MenuIcon/>
-      </div>
-
-
-      {/* Logo */}
-      <div className="flex items-center gap-1.5">
-
-       <img src={massage} alt="massage"  className="
-    w-8
-    h-8
-    rounded-full
-    object-cover
-    shrink-0
-  "></img>
-        <div className="leading-none text-center">
-
-          <div className="
-            text-[15px]
-            font-serif
-            text-[#0d4d40]
-            tracking-tight
-          ">
-            Ethio<span className="font-bold">massage</span>
-          </div>
-
-          <div className="
-            text-[7px]
-            italic
-            text-[#c9a24b]
-            tracking-wide
-            mt-1
-          ">
-            Relax, Renew, Rejuvenate
-          </div>
-
-        </div>
-      </div>
-
-
-      {/* Call Button */}
-      <button
-        aria-label="Call us"
+    <div
+      className="
+        fixed
+        left-0
+        right-0
+        top-0
+        z-50
+        bg-[#f7f5f0]
+        px-4
+        py-3
+        sm:px-6
+      "
+    >
+      <header
         className="
-          flex items-center justify-center
-          w-11 h-11
-          rounded-full
-          bg-[#0d4d40]
-          cursor-pointer
+          mx-auto
+          flex
+          h-[68px]
+          w-full
+          max-w-5xl
+          items-center
+          justify-between
+          rounded-[28px]
+          border
+          border-slate-100
+          bg-white
+          px-4
+          shadow-[0_20px_45px_rgba(15,23,42,0.08)]
+          sm:px-5
         "
       >
-
-        <svg
-          className="w-4 h-4"
-          viewBox="0 0 24 24"
+        {/* MENU */}
+        <button
+          type="button"
+          aria-label="Menu"
+          onClick={() => navigate("/")}
+          className="
+            flex
+            h-10
+            w-10
+            items-center
+            justify-center
+            rounded-full
+            text-[#0d4d40]
+            transition-all
+            duration-300
+            hover:bg-[#f7f5f0]
+            hover:scale-105
+            active:scale-95
+          "
         >
-          <path
-            fill="white"
-            d="
-            M6.6 10.8c1.4 2.8 3.8 5.2
-            6.6 6.6l2.2-2.2
-            c.3-.3.7-.4 1-.2
-            1.1.4 2.3.6 3.6.6
-            .6 0 1 .4 1 1V20
-            c0 .6-.4 1-1 1
-            C10.5 21 3 13.5 3 4
-            c0-.6.4-1 1-1h3.5
-            c.6 0 1 .4 1 1
-            0 1.3.2 2.5.6 3.6
-            .1.4 0 .8-.2 1
-            l-2.3 2.2z
+          <Menu className="h-5 w-5" strokeWidth={2} />
+        </button>
+
+        {/* LOGO */}
+        <button
+          type="button"
+          onClick={() => navigate("/")}
+          className="
+            flex
+            items-center
+            gap-2
+            transition-transform
+            duration-300
+            hover:scale-[1.02]
+          "
+        >
+          <img
+            src={massage}
+            alt="Ethiomassage"
+            className="
+              h-9
+              w-9
+              shrink-0
+              rounded-full
+              object-cover
             "
           />
-        </svg>
 
-      </button>
+          <div className="text-center leading-none">
+            <div
+              className="
+                font-serif
+                text-[16px]
+                tracking-tight
+                text-[#0d4d40]
+              "
+            >
+              Ethio<span className="font-bold">massage</span>
+            </div>
 
-    </header>
+            <div
+              className="
+                mt-1
+                text-[7px]
+                italic
+                tracking-wide
+                text-[#c9a24b]
+              "
+            >
+              Relax, Renew, Rejuvenate
+            </div>
+          </div>
+        </button>
+
+        {/* CALL BUTTON */}
+        <button
+          type="button"
+          aria-label="Call us"
+          onClick={handleCall}
+          className="
+            flex
+            h-10
+            w-10
+            items-center
+            justify-center
+            rounded-full
+            bg-[#0d4d40]
+            text-white
+            shadow-[0_6px_15px_rgba(13,77,64,0.20)]
+            transition-all
+            duration-300
+            hover:-translate-y-0.5
+            hover:bg-[#075e54]
+            hover:shadow-lg
+            active:scale-95
+          "
+        >
+          <Phone className="h-4 w-4" strokeWidth={2} />
+        </button>
+      </header>
     </div>
   );
 }

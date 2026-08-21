@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Header from "./componenet/Header"; // <-- Import Header
+import Header from "./componenet/Header";
 
 import Home from "./pages/Home";
 import ServicesPage from "./pages/Servicespage";
@@ -16,34 +16,55 @@ import Chat from "./componenet/ChatWidget";
 function App() {
   return (
     <BrowserRouter>
-
-      {/* Header appears on every page */}
+      {/* Fixed header appears on EVERY page */}
       <Header />
-      <Routes>
-        {/* Home */}
-        <Route path="/" element={<Home />} />
 
-        {/* Services */}
-        <Route path="/services" element={<ServicesPage />} />
+      {/* Main page content */}
+      <main className="pt-[92px]">
+        <Routes>
 
-        {/* Individual Service */}
-        <Route
-          path="/services/:slug"
-          element={<ServiceDetailPage />}
-        />
+          {/* Home */}
+          <Route
+            path="/"
+            element={<Home />}
+          />
 
-        {/* Booking */}
-        <Route path="/booking" element={<BookingPage />} />
+          {/* Services */}
+          <Route
+            path="/services"
+            element={<ServicesPage />}
+          />
 
-        {/* Contact */}
-        <Route path="/contact" element={<Contactsection />} />
+          {/* Individual service */}
+          <Route
+            path="/services/:slug"
+            element={<ServiceDetailPage />}
+          />
 
-        {/* 404 */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+          {/* Booking */}
+          <Route
+            path="/booking"
+            element={<BookingPage />}
+          />
 
-      {/* Display on every page */}
+          {/* Contact */}
+          <Route
+            path="/contact"
+            element={<Contactsection />}
+          />
+
+          {/* 404 */}
+          <Route
+            path="*"
+            element={<NotFound />}
+          />
+
+        </Routes>
+      </main>
+
+      {/* Appears on every page */}
       <BottomNavBar />
+
       <Chat />
     </BrowserRouter>
   );

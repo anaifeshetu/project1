@@ -65,9 +65,9 @@ export default function Home() {
 
       <div id="home">
         <Herosection />
-         
+         <ServicesPage/>
       <WhyChooseEthiomassage />
-      <ServicesPage/>
+      
       <BookingPage />
       <ContactSection/>
 
